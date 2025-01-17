@@ -1,0 +1,62 @@
+.desktop-view {
+  body:not(.has-sidebar-page) {
+    #reply-control:not(.fullscreen).hide-preview {
+      --layout-gap: 0.25em;
+      max-width: 720px;
+      margin-left: calc(var(--topic-avatar-width) + var(--layout-gap));
+      width: calc(100vw - var(--topic-avatar-width) + var(--layout-gap) - 1em);
+      @media screen and (min-width: 1110px) {
+        left: calc((100% - var(--d-max-width)) / 2);
+        margin-left: calc(var(--topic-avatar-width) + var(--layout-gap));
+      }
+    }
+  }
+
+  body.has-sidebar-page {
+    #reply-control:not(.fullscreen).hide-preview {
+      --layout-gap: 2em;
+      max-width: 720px;
+      margin-left: calc(
+        var(--topic-avatar-width) + var(--d-sidebar-width) + var(--layout-gap)
+      );
+      margin-right: 0;
+      @media screen and (max-width: 1190px) {
+        max-width: calc(
+          100vw - var(--topic-avatar-width) - var(--d-sidebar-width) - 10em
+        );
+      }
+      @media screen and (max-width: 1000px) {
+        margin-left: calc(
+          var(--topic-avatar-width) + var(--d-sidebar-width) + 1em
+        );
+        max-width: calc(
+          100vw - var(--topic-avatar-width) - var(--d-sidebar-width) - 8em
+        );
+      }
+      @media screen and (max-width: 924px) {
+        max-width: calc(
+          100vw - var(--topic-avatar-width) - var(--d-sidebar-width) - 1.5em
+        );
+      }
+      @media screen and (min-width: 1382px) {
+        max-width: 720px;
+        left: calc((100% - var(--d-max-width)) / 2);
+        margin-left: calc(
+          var(--topic-avatar-width) + var(--d-sidebar-width) / 2 +
+            var(--layout-gap)
+        );
+      }
+    }
+  }
+
+  // reset core CSS
+  @media screen and (min-width: 1475px) {
+    .has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+      transform: unset;
+    }
+  }
+
+  .sidebar-wrapper .sidebar-container {
+    height: 100%;
+  }
+}
