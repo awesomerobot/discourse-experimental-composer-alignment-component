@@ -1,5 +1,3 @@
 # Experimental Composer Alignment
 
-**Theme Summary**
-
-For more information, please see: **url to meta topic**
+Attempts to align the composer with topic content when the preview is disabled
